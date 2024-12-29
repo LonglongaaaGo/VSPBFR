@@ -3,6 +3,7 @@
 Official PyTorch implementation of VSPBFR.
 
 [[paper]](https://www.sciencedirect.com/science/article/pii/S003132032401063X?via%3Dihub)
+[![Page Views Count](https://badges.toozhao.com/badges/01JG80JMZ79FN7DVMF0D6RG1BF/green.svg)](https://badges.toozhao.com/stats/01JG80JMZ79FN7DVMF0D6RG1BF "Get your own page views count badge on badges.toozhao.com")
 
 
 <div style="text-align: justify"> Blind face restoration aims to recover high-quality facial images from various unidentified sources of degradation, posing significant challenges due to the minimal information retrievable from the degraded images. 
