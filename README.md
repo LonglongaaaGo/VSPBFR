@@ -18,7 +18,7 @@ To fully utilize the visual prompts and enhance the extraction of informative an
 #### Requirements
 Corresponding packages are in the requirements.txt file.
 - Note that other versions of PyTorch (e.g., higher than 1.7) also work well, but you have to install the corresponding CUDA version. 
-- Tip: please make sure that CUDA, CUDNN, and PyTorch are aligned well with each other [PyTorch](https://pytorch.org/get-started/previous-versions/).
+- Tip: please make sure that CUDA, CUDNN, and PyTorch are aligned well with each other; see here [PyTorch](https://pytorch.org/get-started/previous-versions/).
 #### Installation
 ```python
 git clone 
