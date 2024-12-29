@@ -1,8 +1,9 @@
-# Visual Style Prompt Learning Using Diffusion Models for Blind Face Restoration Visual Style Prompt (VSPBFR)
+# Visual Style Prompt Learning Using Diffusion Models for Blind Face Restoration (VSPBFR)
 
 Official PyTorch implementation of VSPBFR.
 
-[[paper]](https://www.sciencedirect.com/science/article/pii/S003132032401063X?via%3Dihub)
+Pattern Recognition 🔥🔥🔥 [[paper]](https://www.sciencedirect.com/science/article/pii/S003132032401063X?via%3Dihub) 
+[![Page Views Count](https://badges.toozhao.com/badges/01JG80JMZ79FN7DVMF0D6RG1BF/green.svg)](https://badges.toozhao.com/stats/01JG80JMZ79FN7DVMF0D6RG1BF "Get your own page views count badge on badges.toozhao.com")
 
 
 <div style="text-align: justify"> Blind face restoration aims to recover high-quality facial images from various unidentified sources of degradation, posing significant challenges due to the minimal information retrievable from the degraded images. 
@@ -55,8 +56,8 @@ root/
 
 
 #### Training the style encoder
-- We utilize e4e to train our style encoder, for more details, please refer to .
-- We have prepared the pre-trained checkpoints for you: [style_encode.pt]() (put models in ./pre-train)
+- We utilize e4e to train our style encoder, for more details, please refer to [e4e_trainer](https://github.com/LonglongaaaGo/e4e_trainer?tab=readme-ov-file#training-the-e4e-encoder-for-the-visual-style-prompt-restoration).
+- We have prepared the pre-trained checkpoints for you: [style_encoder_decoder.pt](https://huggingface.co/Wanglong2/VSPBFR/blob/main/style_encoder_decoder.pt) (put models in ./pre-train)
 
 #### Training the code diffuser
 ```python
@@ -122,12 +123,13 @@ python code_diffuser_train.py
 ![Performance](./imgs/teaser5.png)
 ![Performance](./imgs/teaser1.png)
 ![Performance](./imgs/teaser2.png)
-Incorporating our restoration method significantly improves facial landmark detection and ace emotion recognition, by enhancing the clarity of facial features in the restored images.
+Incorporating our restoration method significantly improves facial landmark detection and ace emotion recognition by enhancing the clarity of facial features in the restored images.
 
 
 ## Acknowledgements
 
-- **EXE-GAN** : [EXE-GAN](https://github.com/LonglongaaaGo/EXE-GAN)
-- **DiffIR** : [DiffIR](https://github.com/Zj-BinXia/DiffIR)
+- **EXE-GAN**: [EXE-GAN](https://github.com/LonglongaaaGo/EXE-GAN)
+- **PromptRR**: [PromptRR](https://github.com/TaoWangzj/PromptRR)
+- **DiffIR**: [DiffIR](https://github.com/Zj-BinXia/DiffIR)
 - **RestoreFormer++**:  [RestoreFormer++](https://github.com/wzhouxiff/RestoreFormerPlusPlus)
 - **pSp encoder**: [pSp](https://github.com/eladrich/pixel2style2pixel)
