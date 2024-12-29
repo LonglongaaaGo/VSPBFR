@@ -16,7 +16,6 @@ import my_lpips
 
 from Loss.id_loss import IDLoss
 from dataset import ImageFolder_restore
-from distributed_test import get_bigger_batch
 from op.utils import set_random_seed
 from Loss.e4e_embedding import E4e_embedding
 from torch.utils.data import Subset
@@ -31,6 +30,15 @@ from distributed import (
     # get_world_size,
 )
 
+
+def get_bigger_batch(data_len,max_num=100):
+
+    for i in range(max_num,1,-1):
+        if i>data_len: return data_len
+        if data_len%(i) == 0:
+            return i
+
+    return 1
 
 def data_sampler(dataset, shuffle, distributed):
     if distributed:
