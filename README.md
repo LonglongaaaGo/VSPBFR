@@ -123,12 +123,13 @@ python code_diffuser_train.py
 ![Performance](./imgs/teaser5.png)
 ![Performance](./imgs/teaser1.png)
 ![Performance](./imgs/teaser2.png)
-Incorporating our restoration method significantly improves facial landmark detection and ace emotion recognition, by enhancing the clarity of facial features in the restored images.
+Incorporating our restoration method significantly improves facial landmark detection and ace emotion recognition by enhancing the clarity of facial features in the restored images.
 
 
 ## Acknowledgements
 
-- **EXE-GAN** : [EXE-GAN](https://github.com/LonglongaaaGo/EXE-GAN)
-- **DiffIR** : [DiffIR](https://github.com/Zj-BinXia/DiffIR)
+- **EXE-GAN**: [EXE-GAN](https://github.com/LonglongaaaGo/EXE-GAN)
+- **PromptRR**: [PromptRR](https://github.com/TaoWangzj/PromptRR)
+- **DiffIR**: [DiffIR](https://github.com/Zj-BinXia/DiffIR)
 - **RestoreFormer++**:  [RestoreFormer++](https://github.com/wzhouxiff/RestoreFormerPlusPlus)
 - **pSp encoder**: [pSp](https://github.com/eladrich/pixel2style2pixel)
