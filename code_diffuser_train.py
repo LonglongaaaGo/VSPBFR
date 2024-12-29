@@ -249,12 +249,12 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="code diffuser trainer")
     parser.add_argument("--path", type=str, help="path to the lmdb dataset")
     parser.add_argument("--iter", type=int, default=200000, help="total training iterations")
-    parser.add_argument( "--batch", type=int, default=16, help="batch sizes for each gpu" )
+    parser.add_argument("--batch", type=int, default=16, help="batch sizes for each gpu" )
     parser.add_argument("--size", type=int, default=256, help="image sizes for the models")
     parser.add_argument("--g_reg_every",type=int, default=4,help="interval of the applying path length regularization",)
     parser.add_argument("--percept_loss_weight", type=float, default=0.5, help="weight of the percept loss")
     parser.add_argument("--id_loss_weight", type=float, default=0.1, help="weight of the id loss")
-    parser.add_argument( "--ckpt", type=str,  default=None, help="path to the checkpoints to resume training",)
+    parser.add_argument("--ckpt", type=str,  default=None, help="path to the checkpoints to resume training",)
     parser.add_argument("--lr", type=float, default=0.002, help="learning rate")
     parser.add_argument("--channel_multiplier",type=int, default=2,  help="channel multiplier factor for the models. config-f = 2, else = 1",)
     parser.add_argument("--debug",type=bool,default=False,help = "for debugging")
@@ -267,8 +267,8 @@ if __name__ == "__main__":
 
     parser.add_argument("--resume", type=bool,default=False, help="reload => False, resume = > True ",)
     parser.add_argument("--logger_path", type=str, default="./logger.txt", help="path to the output the generated images")
-    parser.add_argument("--arcface_path", type=str, default="pretrained_model/Arcface.pth", help="Arcface model pretrained model")
-    parser.add_argument("--psp_checkpoint_path", type=str, default="Pre-trained/E4E_facial_restore/best_model_33507_13w.pt", help="psp model pretrained model")
+    parser.add_argument("--arcface_path", type=str, default="pre-train/Arcface.pth", help="Arcface model pretrained model")
+    parser.add_argument("--psp_checkpoint_path", type=str, default="pre-train/style_encoder_decoder.pt", help="psp model pretrained model")
 
     args = parser.parse_args()
 
@@ -363,7 +363,7 @@ if __name__ == "__main__":
     )
 
     dataset = ImageFolder_restore(root=args.path, transform=transform, im_size=(args.size, args.size))
-    test_data = ImageFolder_restore(root=args.test_path, transform=test_transform, im_size=(args.size, args.size))
+    test_data = ImageFolder_restore(root=args.path, transform=test_transform, im_size=(args.size, args.size))
 
 
     if args.debug== True:
