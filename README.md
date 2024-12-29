@@ -18,7 +18,7 @@ To fully utilize the visual prompts and enhance the extraction of informative an
 #### Requirements
 Corresponding packages are in the requirements.txt file.
 - Note that other versions of PyTorch (e.g., higher than 1.7) also work well, but you have to install the corresponding CUDA version. 
-
+- Tip: please make sure that CUDA, CUDNN, and PyTorch are aligned well with each other [PyTorch](https://pytorch.org/get-started/previous-versions/).
 #### Installation
 ```python
 git clone 
@@ -34,7 +34,7 @@ pip install -r requirements.txt
 
 
 ## Dataset
-- Training data: our model was trained with FFHQ which attained from [FFHQ](https://github.com/NVlabs/ffhq-dataset) repository. The original size of the images in FFHQ are 1024x1024. We resize them to 512x512 with bilinear interpolation in our work.
+- Training data: our model was trained with FFHQ, which was attained from the [FFHQ](https://github.com/NVlabs/ffhq-dataset) repository. The original size of the images in FFHQ are 1024x1024. We resize them to 512x512 with bilinear interpolation in our work.
 - Test data: CelebA-Test, LFW-Test, WebPhoto-Test, and CelebChild-Test; please check the repo from  [RestoreFormer++](https://github.com/wzhouxiff/RestoreFormerPlusPlus)
 
 
