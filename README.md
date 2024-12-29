@@ -35,7 +35,7 @@ pip install -r requirements.txt
 
 ## Dataset
 - Training data: our model was trained with FFHQ, which was attained from the [FFHQ](https://github.com/NVlabs/ffhq-dataset) repository. The original size of the images in FFHQ are 1024x1024. We resize them to 512x512 with bilinear interpolation in our work.
-- Test data: CelebA-Test, LFW-Test, WebPhoto-Test, and CelebChild-Test; please check the repo from  [RestoreFormer++](https://github.com/wzhouxiff/RestoreFormerPlusPlus)
+- Test data: [CelebA-Test](https://pan.baidu.com/s/1iUvBBFMkjgPcWrhZlZY2og?pwd=test), [LFW-Test](http://vis-www.cs.umass.edu/lfw/#views), [WebPhoto-Test](https://xinntao.github.io/projects/gfpgan), and [CelebChild-Test](https://xinntao.github.io/projects/gfpgan).
 
 
 ## Training
