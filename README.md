@@ -56,7 +56,7 @@ root/
 
 
 #### Training the style encoder
-- We utilize e4e to train our style encoder, for more details, please refer to .
+- We utilize e4e to train our style encoder, for more details, please refer to [e4e_trainer](https://github.com/LonglongaaaGo/e4e_trainer?tab=readme-ov-file#training-the-e4e-encoder-for-the-visual-style-prompt-restoration).
 - We have prepared the pre-trained checkpoints for you: [style_encoder_decoder.pt](https://huggingface.co/Wanglong2/VSPBFR/blob/main/style_encoder_decoder.pt) (put models in ./pre-train)
 
 #### Training the code diffuser
