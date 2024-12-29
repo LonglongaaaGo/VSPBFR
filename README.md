@@ -57,7 +57,7 @@ root/
 
 #### Training the style encoder
 - We utilize e4e to train our style encoder, for more details, please refer to .
-- We have prepared the pre-trained checkpoints for you: [style_encode.pt]() (put models in ./pre-train)
+- We have prepared the pre-trained checkpoints for you: [style_encoder_decoder.pt](https://huggingface.co/Wanglong2/VSPBFR/blob/main/style_encoder_decoder.pt) (put models in ./pre-train)
 
 #### Training the code diffuser
 ```python
