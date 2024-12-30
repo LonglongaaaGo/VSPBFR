@@ -1,4 +1,4 @@
-# Visual Style Prompt Learning Using Diffusion Models for Blind Face Restoration (VSPBFR)
+# Visual Style Prompt Learning Using Diffusion Models for Blind Face Restoration (VSPBFR) Pattern Recognition 2025
 
 Official PyTorch implementation of VSPBFR.
 
