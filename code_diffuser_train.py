@@ -241,7 +241,7 @@ def train(args, loader,test_loader, att_mapper,mapper_optim,device):
                         "best_path": best_path,
                         "best_fid": best_fid,
                     },
-                    f"checkpoint/a_recent_model.pt",)
+                    f"checkpoint/recent_code_diffuser.pt",)
 
 if __name__ == "__main__":
     device = "cuda"
@@ -249,7 +249,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="code diffuser trainer")
     parser.add_argument("--path", type=str, help="path to the lmdb dataset")
     parser.add_argument("--iter", type=int, default=200000, help="total training iterations")
-    parser.add_argument("--batch", type=int, default=16, help="batch sizes for each gpu" )
+    parser.add_argument( "--batch", type=int, default=16, help="batch sizes for each gpu" )
     parser.add_argument("--size", type=int, default=256, help="image sizes for the models")
     parser.add_argument("--g_reg_every",type=int, default=4,help="interval of the applying path length regularization",)
     parser.add_argument("--percept_loss_weight", type=float, default=0.5, help="weight of the percept loss")

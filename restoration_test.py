@@ -217,7 +217,7 @@ if __name__ == "__main__":
     parser.add_argument("--debug",type=bool,default=False,help = "for debugging")
     parser.add_argument("--ckpt", type=str, default=None, help="path to the checkpoints to resume training",)
 
-    parser.add_argument("--ddpm_ckpt", type=str, default="pre-train/code_diffuser.pt", help="ddpm model ckpt path")
+    parser.add_argument("--ddpm_ckpt", type=str, default="pre-train/recent_code_diffuser.pt", help="ddpm model ckpt path")
     parser.add_argument("--psp_checkpoint_path", type=str, default="pre-train/style_encoder_decoder.pt", help="psp model pretrained model")
     parser.add_argument("--eval_dir", type=str, default="./eval_dir", help="path to the output the generated images")
     parser.add_argument("--lq_data_list", type=str,default="", help="splitted by , ",)
