@@ -88,6 +88,7 @@ python restoration_train.py
 [code_diffuser.pt](https://huggingface.co/Wanglong2/VSPBFR/blob/main/code_diffuser.pt) (put models in ./pre-train),
 [restoration_net.pt](https://huggingface.co/Wanglong2/VSPBFR/blob/main/restoration_net.pt) (put models in ./pre-train)
 
+Note: Training the code diffuser will generate a `./checkpoint/recent_code_diffuser.pt` file, which is used for `--ddpm_ckpt`.
 
 #### Testing the restoration network
 ```python
