@@ -22,7 +22,7 @@ Corresponding packages are in the requirements.txt file.
 #### Installation
 ```python
 git clone 
-cd StylePromptRestoration
+cd VSPBFR
 conda create -n VSPBFR
 conda activate VSPBFR
 pip install -r requirements.txt
@@ -68,7 +68,8 @@ python code_diffuser_train.py
 ```
 
 #### Training the restoration network
-```python restoration_train.py 
+```python
+python restoration_train.py 
 --path [training img folder]
 --batch 4
 --psp_checkpoint_path [style encoder checkpoint]
@@ -89,7 +90,8 @@ python code_diffuser_train.py
 
 
 #### Testing the restoration network
-```python restoration_test.py
+```python
+python restoration_test.py
 --ckpt_root [restoration network checkpoint]
 --lq_data_list [low-quality image data path list. For example:  ./patha,./pathb,...]
 --hq_data_list [high-quality image data path list. For example:  ./patha,None,... ] (if there is no ground truth images, just put None)
