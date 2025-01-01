@@ -122,6 +122,9 @@ python restoration_test.py
     }
   ```
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=LonglongaaaGo/VSPBFR&type=Date)](https://star-history.com/#LonglongaaaGo/VSPBFR&Date)
 
 ## Results
 ![Performance](./imgs/teaser5.png)
