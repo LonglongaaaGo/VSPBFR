@@ -132,7 +132,5 @@ Incorporating our restoration method significantly improves facial landmark dete
 ## Acknowledgements
 
 - **EXE-GAN**: [EXE-GAN](https://github.com/LonglongaaaGo/EXE-GAN)
-- **PromptRR**: [PromptRR](https://github.com/TaoWangzj/PromptRR)
-- **DiffIR**: [DiffIR](https://github.com/Zj-BinXia/DiffIR)
-- **RestoreFormer++**:  [RestoreFormer++](https://github.com/wzhouxiff/RestoreFormerPlusPlus)
 - **pSp encoder**: [pSp](https://github.com/eladrich/pixel2style2pixel)
+- **RestoreFormer++**:  [RestoreFormer++](https://github.com/wzhouxiff/RestoreFormerPlusPlus)
