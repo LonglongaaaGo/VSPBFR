@@ -98,7 +98,6 @@ python restoration_test.py
 --hq_data_list [high-quality image data path list. For example:  ./patha,None,... ] (if there is no ground truth images, just put None)
 --data_name_list [dataname list. For example:  dataset_name_a, dataset_name_b,...]
 --psp_checkpoint_path [style encoder checkpoint]
---arcface_path [Arcface checkpoint]
 --ddpm_ckpt [code diffuser checkpoint]
 --size 512
 --batch 4
