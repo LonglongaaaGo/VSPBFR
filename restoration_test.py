@@ -217,13 +217,12 @@ if __name__ == "__main__":
     parser.add_argument("--debug",type=bool,default=False,help = "for debugging")
     parser.add_argument("--ckpt", type=str, default=None, help="path to the checkpoints to resume training",)
 
-    parser.add_argument("--ddpm_ckpt", type=str, default="pre-train/recent_code_diffuser.pt", help="ddpm model ckpt path")
+    parser.add_argument("--ddpm_ckpt", type=str, default="pre-train/code_diffuser.pt", help="ddpm model ckpt path")
     parser.add_argument("--psp_checkpoint_path", type=str, default="pre-train/style_encoder_decoder.pt", help="psp model pretrained model")
     parser.add_argument("--eval_dir", type=str, default="./eval_dir", help="path to the output the generated images")
     parser.add_argument("--lq_data_list", type=str,default="", help="splitted by , ",)
     parser.add_argument("--hq_data_list", type=str,default="", help="splitted by , ",)
     parser.add_argument("--data_name_list", type=str,default="", help="splitted by , ",)
-    parser.add_argument("--ckpt_root", type=str,default="./checkpoint", help="the root for all the ckpt files",)
     args = parser.parse_args()
 
     args.distributed = False
@@ -233,33 +232,26 @@ if __name__ == "__main__":
 
     from models.RestoreNet import Restoration_net as Generator
 
-    ckpts = []
-    listdir(args.ckpt_root,ckpts)
-
     eval_root = args.eval_dir
-    for ckpt_path in ckpts:
-        print("======"*30)
-        if "pt" != str(ckpt_path).strip().split(".")[-1]: continue
-        print("for ckpt test:",ckpt_path)
-        args.ckpt = ckpt_path
-        g_ema = Generator(
-            args.size, args.latent, args.n_mlp, channel_multiplier=args.channel_multiplier
-        ).to(device)
+    print("======"*30)
+    if "pt" == str(args.ckpt).strip().split(".")[-1]: 
+        print("for ckpt test:",args.ckpt)
+    g_ema = Generator(
+        args.size, args.latent, args.n_mlp, channel_multiplier=args.channel_multiplier
+    ).to(device)
 
-        print(g_ema)
-        if args.ckpt is not None:
-            print("load models:", args.ckpt)
-            try:
-                ckpt = torch.load(args.ckpt, map_location=lambda storage, loc: storage)
-                g_ema.load_state_dict(ckpt["g_ema"])
-            except RuntimeError as e:
-                print(str(e))
-                continue
+    print(g_ema)
+    if args.ckpt is not None:
+        print("load models:", args.ckpt)
+        try:
+            ckpt = torch.load(args.ckpt, map_location=lambda storage, loc: storage)
+            g_ema.load_state_dict(ckpt["g_ema"])
+        except RuntimeError as e:
+            print(str(e))
 
-        name_ = os.path.basename(str(ckpt_path)).strip().split(".")[0]
-        args.eval_dir = os.path.join(eval_root, name_)
-        g_ema.eval()
-        store_data = get_store_data(args.lq_data_list, args.hq_data_list, args.data_name_list)
-        test_main(args, store_data, g_ema, device)
-        torch.cuda.empty_cache()
-
+    name_ = os.path.basename(str(args.ckpt)).strip().split(".")[0]
+    args.eval_dir = os.path.join(eval_root, name_)
+    g_ema.eval()
+    store_data = get_store_data(args.lq_data_list, args.hq_data_list, args.data_name_list)
+    test_main(args, store_data, g_ema, device)
+    torch.cuda.empty_cache()
